@@ -17,3 +17,7 @@ Data Aquisition:
 Step 1: Downloaded Lung Cancer Dataset from Kaggle.com from 'https://www.kaggle.com/datasets/mysarahmadbhat/lung-cancer/'  
 Step 2: Copied this file into the data directory for this project    
 Step 3: renamed the file to 'survey_lung_cancer.csv'  
+
+Understanding the Data:
+Step 1: File is a csv file(comma seperated value)
+Step 2: We will opent the file using pandas and examine the contents
