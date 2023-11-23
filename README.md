@@ -12,3 +12,8 @@ Step 6: Installed python and said hello world for the millitonth time
 Step 7: Added a requrements.txt file for all the libraries i think i will need for now  
 Step 8: Installed the requirments using the following command 'pip install -r .\requirments.txt'  
 Step 8.1: Every time I need a new library i can add it in requiments and run the code above again  
+
+Data Aquisition:
+Step 1: Downloaded Lung Cancer Dataset from Kaggle.com from 'https://www.kaggle.com/datasets/mysarahmadbhat/lung-cancer/'  
+Step 2: Copied this file into the data directory for this project    
+Step 3: renamed the file to 'survey_lung_cancer.csv'  
