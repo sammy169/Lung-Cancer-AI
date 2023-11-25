@@ -10,7 +10,8 @@ def form():
 def result():
     gender = request.form.get('gender')
     age = request.form.get('age')
-    return render_template('result.html', gender=gender, age=age)
+    smoking = request.form.get('smoking')
+    return render_template('result.html', gender=gender, age=age, smoking=smoking)
 
 if __name__ == '__main__':
     app.run(debug=True)
