@@ -40,3 +40,8 @@ Choosing the Algorithm:
 3. I tried to make the logistic regression due to logistic being yes or no and i fail on the second line of code
 4. We took a litlle detour due to a error because the values for some columns were strings so we made them into numbers so that we could easily use logictic regression. *We tried to make logistical regression, is the reason it didnt work  
 5. Today I finished most of the AI i just have to integrate it into a ai and then I have to finish tyhe posterboard tommorow.  
+
+
+Creating web UI for this project  
+1. Import flask in requirements.txt and install using pip 
+2. Made a basic web page that we will expand on 
