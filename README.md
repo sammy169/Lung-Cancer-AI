@@ -38,3 +38,4 @@ Choosing the Algorithm:
 1. This problem requires us to use supervised learning to predict/classify if the patient has lung cancer or not  
 2. Now we go and search algorithims available for classification.  
 3. I tried to make the logistic regression due to logistic being yes or no and i fail on the second line of code
+4. We took a litlle detour due to a error because the values for some columns were strings so we made them into numbers so that we could easily use logictic regression. *We tried to make regression, suspect that this is the reason it didnt work
