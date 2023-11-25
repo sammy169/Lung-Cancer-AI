@@ -45,3 +45,4 @@ Choosing the Algorithm:
 Creating web UI for this project  
 1. Import flask in requirements.txt and install using pip 
 2. Made a basic web page that we will expand on 
+3. while expanding a note to self is that yf = yellow fingers.  
