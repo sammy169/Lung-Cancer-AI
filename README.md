@@ -27,7 +27,14 @@ Step 5: I print all the name of the columns using df.columns
 Step 6: The data is of current patients who tested for lung cancer and were given a diagnosis of positive or negative in the column LUNG_CANCER. The other column represents various attrubutes that were colle4cted for the patient such as age and smoking.  
 Step 7: Our task in this project is to use this data to predict whether or not someone has lung cancer if we are provided all the attributes in this file.  
 
+
+
+Splitting the Data:  
+1. I got all the data in a jupyter notebook and then i converteed on datframe into two dataframes X and y. X represents the predictors which in this case are the symptoms and y is the result which in this case is wheter the patient has lung cancer or not  
+2. now we split the data into train and test datasets using the command 'X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)'  
+3. This splits 80 percent of data for training the ai and the remaining twenty for testing the ai model.  
+
 Choosing the Algorithm:  
-1. This problem requires us to use supervised learning to predict if the patient has lung cancer or not  
-2. We will now split the data set into 2 parts. part 1 will be used to train the model, and 2 will be used to test/verify the model and check its accuracy.  
-3. 
+1. This problem requires us to use supervised learning to predict/classify if the patient has lung cancer or not  
+2. Now we go and search algorithims available for classification.  
+3. I tried to make the logistic regression due to logistic being yes or no and i fail on the second line of code
