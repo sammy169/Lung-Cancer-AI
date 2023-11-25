@@ -21,3 +21,8 @@ Step 3: renamed the file to 'survey_lung_cancer.csv'
 Understanding the Data:
 Step 1: File is a csv file(comma seperated value)
 Step 2: We will opent the file using pandas and examine the contents
+Step 3: I read the csv using the read_csv function in the pandas library  
+Step 4: I print the number of rows and columns using df.shape  
+Step 5: I print all the name of the columns using df.columns
+Step 6: The data is of current patients who tested for lung cancer and were given a diagnosis of positive or negative in the column LUNG_CANCER. The other column represents various attrubutes that were colle4cted for the patient such as age and smoking.  
+Step 7: Our task in this project is to use this data to predict whether or not someone has lung cancer if we are provided all the attributes in this file.  
