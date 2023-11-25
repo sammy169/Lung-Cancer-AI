@@ -17,6 +17,7 @@ def result():
     yf = request.form.get('yf')
     anxiety = request.form.get('anxiety')
     peerpressure = request.form.get('peerpressure')
+    chronicdisease = request.form.get('chronicdisease')
 
     return render_template('result.html',
         gender=gender, 
@@ -24,7 +25,8 @@ def result():
         smoking=smoking,
         yf=yf,
         anxiety=anxiety,
-        peerpressure=peerpressure,)
+        peerpressure=peerpressure,
+        chronicdisease=chronicdisease,)
 
 if __name__ == '__main__':
     app.run(debug=True)
