@@ -24,6 +24,7 @@ def result():
     alcohol = request.form.get('alcohol')
     cough = request.form.get('cough')
     shortbreath = request.form.get('shortbreath')
+    swallowdiff = request.form.get('swallowdiff')
 
     return render_template('result.html',
         gender=gender, 
@@ -38,7 +39,8 @@ def result():
         wheezing=wheezing,
         alcohol=alcohol,
         cough=cough,
-        shortbreath=shortbreath,)
+        shortbreath=shortbreath,
+        swallowdiff=swallowdiff)
 
 if __name__ == '__main__':
     app.run(debug=True)
