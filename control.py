@@ -75,9 +75,9 @@ def result():
     print(predicted_value)
 
     if predicted_value == 1:
-        predicted_value = "You have a high chance of getting lung cancer."
+        predicted_value = "The patient has a chance of getting lung cancer, always remember to consult a medical professional this is not 100% accurate."
     else:
-        predicted_value = "You have a low chance of getting lung cancer."
+        predicted_value = "The patient has a low chance of getting lung cancer, always remember to consult a medical professional this is not 100% accurate."
      
     return render_template('result.html',
         gender=gender, 
