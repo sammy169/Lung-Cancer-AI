@@ -6,7 +6,10 @@ app = Flask(__name__)
 def form():
     return render_template('form.html')
 
-# yf stands for yellow_fingers
+def predict(gender, age, smoking, yf, anxiety, 
+                            peerpressure, chronicdisease, fatigue, allergy, wheezing, 
+                            alcohol, cough, shortbreath, swallowdiff, chestpain):
+    return True
 
 @app.route('/result', methods=['POST'])
 def result():
@@ -27,6 +30,10 @@ def result():
     swallowdiff = request.form.get('swallowdiff')
     chestpain = request.form.get('chestpain')
 
+    predicted_value = predict(gender, age, smoking, yf, anxiety, 
+                            peerpressure, chronicdisease, fatigue, allergy, wheezing, 
+                            alcohol, cough, shortbreath, swallowdiff, chestpain)
+
     return render_template('result.html',
         gender=gender, 
         age=age, 
@@ -42,7 +49,8 @@ def result():
         cough=cough,
         shortbreath=shortbreath,
         swallowdiff=swallowdiff,
-        chestpain=chestpain)
+        chestpain=chestpain, 
+        predicted_value=predicted_value)
 
 if __name__ == '__main__':
     app.run(debug=True)
