@@ -71,6 +71,13 @@ def result():
     predicted_value = predict([gender, age, smoking, yf, anxiety, 
                             peerpressure, chronicdisease, fatigue, allergy, wheezing, 
                             alcohol, cough, shortbreath, swallowdiff, chestpain])
+    
+    print(predicted_value)
+
+    if predicted_value == 1:
+        predicted_value = "You have a high chance of getting lung cancer."
+    else:
+        predicted_value = "You have a low chance of getting lung cancer."
      
     return render_template('result.html',
         gender=gender, 
