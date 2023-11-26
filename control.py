@@ -1,4 +1,9 @@
 from flask import Flask, render_template, request
+import pandas as pd
+from sklearn.model_selection import train_test_split
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
 
 app = Flask(__name__)
 
@@ -6,10 +11,39 @@ app = Flask(__name__)
 def form():
     return render_template('form.html')
 
-def predict(gender, age, smoking, yf, anxiety, 
-                            peerpressure, chronicdisease, fatigue, allergy, wheezing, 
-                            alcohol, cough, shortbreath, swallowdiff, chestpain):
-    return True
+
+def create_model():
+    df = pd.read_csv("data/survey_lung_cancer.csv")
+    
+    gender_mapping = {'M': 0, 'F': 1}
+    df['GENDER'] = df['GENDER'].map(gender_mapping)
+
+    result_mapping = {'YES': 1, 'NO': 0}
+    df['LUNG_CANCER'] = df['LUNG_CANCER'].map(result_mapping)
+    
+    X = df.iloc[:, :-1]  # Select all columns except the last one
+    y = df.iloc[:, -1]  # Select the last column as the target variable
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+    # creating the logistic regression model
+    model = LogisticRegression()
+
+    # fitting the model to the training data
+    model.fit(X_train,y_train)
+
+    return model, X.columns
+
+def predict(attributes):
+
+    model, columns = create_model()
+
+    user_entry_df = pd.DataFrame([attributes], columns=columns)
+
+    # Predicting the target variable for the test data
+    predicted_value = model.predict(user_entry_df)
+
+    return predicted_value[0]
 
 @app.route('/result', methods=['POST'])
 def result():
@@ -30,9 +64,12 @@ def result():
     swallowdiff = request.form.get('swallowdiff')
     chestpain = request.form.get('chestpain')
 
-    predicted_value = predict(gender, age, smoking, yf, anxiety, 
+
+    predicted_value = None
+    
+    print([gender, age, smoking, yf, anxiety, 
                             peerpressure, chronicdisease, fatigue, allergy, wheezing, 
-                            alcohol, cough, shortbreath, swallowdiff, chestpain)
+                            alcohol, cough, shortbreath, swallowdiff, chestpain])
 
     return render_template('result.html',
         gender=gender, 
