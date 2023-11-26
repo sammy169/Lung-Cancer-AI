@@ -22,7 +22,7 @@ def result():
     allergy = request.form.get('allergy')
     wheezing = request.form.get('wheezing')
     alcohol = request.form.get('alcohol')
-
+    cough = request.form.get('cough')
     return render_template('result.html',
         gender=gender, 
         age=age, 
@@ -34,7 +34,8 @@ def result():
         fatigue=fatigue,
         allergy=allergy,
         wheezing=wheezing,
-        alcohol=alcohol,)
+        alcohol=alcohol,
+        cough=cough,)
 
 if __name__ == '__main__':
     app.run(debug=True)
