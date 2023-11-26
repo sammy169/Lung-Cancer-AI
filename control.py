@@ -64,13 +64,14 @@ def result():
     swallowdiff = request.form.get('swallowdiff')
     chestpain = request.form.get('chestpain')
 
-
-    predicted_value = None
-    
     print([gender, age, smoking, yf, anxiety, 
                             peerpressure, chronicdisease, fatigue, allergy, wheezing, 
                             alcohol, cough, shortbreath, swallowdiff, chestpain])
 
+    predicted_value = predict([gender, age, smoking, yf, anxiety, 
+                            peerpressure, chronicdisease, fatigue, allergy, wheezing, 
+                            alcohol, cough, shortbreath, swallowdiff, chestpain])
+     
     return render_template('result.html',
         gender=gender, 
         age=age, 

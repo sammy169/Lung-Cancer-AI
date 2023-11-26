@@ -46,3 +46,7 @@ Creating web UI for this project
 1. Import flask in requirements.txt and install using pip 
 2. Made a basic web page that we will expand on 
 3. while expanding a note to self is that yf = yellow fingers.  
+4. We added all of the possible symptoms to the html  
+5. we made it to drop down  
+6. We made the lung cancer we just have to clean up the website  
+7. 
