@@ -7,14 +7,16 @@ from sklearn.linear_model import LogisticRegression
 
 app = Flask(__name__)
 
+#Rendering HTML Page
 @app.route('/')
 def form():
     return render_template('form.html')
 
-
+#Creating the model
 def create_model():
     df = pd.read_csv("data/survey_lung_cancer.csv")
     
+    #Wherever there is strings we have to conver them to numbers, and machine learning runs mostly on numbers
     gender_mapping = {'M': 0, 'F': 1}
     df['GENDER'] = df['GENDER'].map(gender_mapping)
 
@@ -99,3 +101,4 @@ def result():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
